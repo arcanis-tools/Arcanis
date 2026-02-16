@@ -70,6 +70,8 @@ python3 Arcanis_Community.py https://target.com --smart
 
 ## Architecture
 
+[![Adaptive Scanning Pipeline](smart-pipeline.png)](smart-pipeline.png)
+
 Every scan follows a 6-stage pipeline:
 
 ```
@@ -85,6 +87,8 @@ CT logs    DNS+HTTP  SmartRoute  13 mod   50+ API   0-100
 | **Scan** | 90+ patterns + 13 modules, only where relevant |
 | **Verify** | 50+ API verifiers call the real endpoint *(Pro)* |
 | **Score** | 6-factor confidence → single 0-100 number |
+
+[![Confidence Scoring Pipeline](scoring-pipeline.png)](scoring-pipeline.png)
 
 ---
 
