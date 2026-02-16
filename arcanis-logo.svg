@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <!-- Main gradient: cyan → blue → purple -->
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="50%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+
+    <!-- Accent gradient: blue → purple -->
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+
+    <!-- Glow gradient for background ring -->
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="60%" stop-color="transparent"/>
+      <stop offset="85%" stop-color="rgba(59,130,246,0.06)"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+
+    <!-- Scan line glow -->
+    <linearGradient id="scanGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="30%" stop-color="#06B6D4" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#3B82F6"/>
+      <stop offset="70%" stop-color="#8B5CF6" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </linearGradient>
+
+    <!-- Drop shadow for depth -->
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#3B82F6" flood-opacity="0.25"/>
+    </filter>
+
+    <filter id="glowFilter">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Clip for inner elements -->
+    <clipPath id="shieldClip">
+      <path d="M400 90 L640 190 C640 190 650 470 400 700 C150 470 160 190 160 190 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="800" fill="#050810" rx="40"/>
+
+  <!-- Subtle background glow -->
+  <circle cx="400" cy="400" r="380" fill="url(#glow)"/>
+
+  <!-- Outer hexagonal ring (subtle) -->
+  <polygon points="400,60 680,200 680,600 400,740 120,600 120,200"
+           fill="none" stroke="#151d35" stroke-width="1" opacity="0.6"/>
+
+  <!-- Second ring -->
+  <polygon points="400,100 650,220 650,580 400,700 150,580 150,220"
+           fill="none" stroke="#1e293b" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Shield shape — main body -->
+  <g filter="url(#shadow)">
+    <path d="M400 110 L620 200 C625 200 635 460 400 680 C165 460 175 200 180 200 Z"
+          fill="#0a0f1e" stroke="url(#g1)" stroke-width="2.5"/>
+  </g>
+
+  <!-- Shield inner border -->
+  <path d="M400 140 L595 218 C598 218 607 445 400 650 C193 445 202 218 205 218 Z"
+        fill="none" stroke="#151d35" stroke-width="1"/>
+
+  <!-- Scan grid lines (vertical) -->
+  <g clip-path="url(#shieldClip)" opacity="0.08">
+    <line x1="250" y1="100" x2="250" y2="700" stroke="#3B82F6" stroke-width="0.5"/>
+    <line x1="300" y1="100" x2="300" y2="700" stroke="#3B82F6" stroke-width="0.5"/>
+    <line x1="350" y1="100" x2="350" y2="700" stroke="#3B82F6" stroke-width="0.5"/>
+    <line x1="400" y1="100" x2="400" y2="700" stroke="#3B82F6" stroke-width="0.5"/>
+    <line x1="450" y1="100" x2="450" y2="700" stroke="#3B82F6" stroke-width="0.5"/>
+    <line x1="500" y1="100" x2="500" y2="700" stroke="#3B82F6" stroke-width="0.5"/>
+    <line x1="550" y1="100" x2="550" y2="700" stroke="#3B82F6" stroke-width="0.5"/>
+    <!-- Horizontal -->
+    <line x1="100" y1="250" x2="700" y2="250" stroke="#3B82F6" stroke-width="0.5"/>
+    <line x1="100" y1="300" x2="700" y2="300" stroke="#3B82F6" stroke-width="0.5"/>
+    <line x1="100" y1="350" x2="700" y2="350" stroke="#3B82F6" stroke-width="0.5"/>
+    <line x1="100" y1="400" x2="700" y2="400" stroke="#3B82F6" stroke-width="0.5"/>
+    <line x1="100" y1="450" x2="700" y2="450" stroke="#3B82F6" stroke-width="0.5"/>
+    <line x1="100" y1="500" x2="700" y2="500" stroke="#3B82F6" stroke-width="0.5"/>
+    <line x1="100" y1="550" x2="700" y2="550" stroke="#3B82F6" stroke-width="0.5"/>
+  </g>
+
+  <!-- Central "A" mark — geometric, angular -->
+  <g transform="translate(400,380)" filter="url(#glowFilter)">
+    <!-- The "A" shape built from lines — architectural/blueprint style -->
+    <path d="M0 -140 L-90 80 L-55 80 L-35 20 L35 20 L55 80 L90 80 Z"
+          fill="none" stroke="url(#g1)" stroke-width="4" stroke-linejoin="miter"/>
+    <!-- Crossbar of A -->
+    <line x1="-52" y1="5" x2="52" y2="5" stroke="url(#g1)" stroke-width="3.5"/>
+    <!-- Inner fill with low opacity -->
+    <path d="M0 -140 L-90 80 L-55 80 L-35 20 L35 20 L55 80 L90 80 Z"
+          fill="url(#g1)" opacity="0.08"/>
+  </g>
+
+  <!-- Scan line sweeping across the "A" -->
+  <g clip-path="url(#shieldClip)">
+    <rect x="160" y="375" width="480" height="2" fill="url(#scanGlow)" opacity="0.9"/>
+    <!-- Scan pulse dots -->
+    <circle cx="310" cy="376" r="3" fill="#06B6D4" opacity="0.8"/>
+    <circle cx="400" cy="376" r="4" fill="#3B82F6"/>
+    <circle cx="490" cy="376" r="3" fill="#8B5CF6" opacity="0.8"/>
+  </g>
+
+  <!-- Corner brackets — "targeting" feel -->
+  <!-- Top left -->
+  <g stroke="url(#g1)" stroke-width="2" fill="none" opacity="0.6">
+    <polyline points="195,180 195,155 220,155"/>
+    <!-- Top right -->
+    <polyline points="605,180 605,155 580,155"/>
+    <!-- Bottom left -->
+    <polyline points="230,620 205,620 205,595"/>
+    <!-- Bottom right -->
+    <polyline points="570,620 595,620 595,595"/>
+  </g>
+
+  <!-- Small data points around the A — "scanning" particles -->
+  <g fill="#06B6D4" opacity="0.5">
+    <circle cx="280" cy="310" r="2"/>
+    <circle cx="330" cy="270" r="1.5"/>
+    <circle cx="470" cy="290" r="2"/>
+    <circle cx="520" cy="340" r="1.5"/>
+    <circle cx="350" cy="490" r="2"/>
+    <circle cx="450" cy="470" r="1.5"/>
+    <circle cx="290" cy="430" r="1.5"/>
+    <circle cx="510" cy="450" r="2"/>
+  </g>
+
+  <!-- Verified checkmark — bottom of shield -->
+  <g transform="translate(400, 540)">
+    <circle cx="0" cy="0" r="22" fill="#0a0f1e" stroke="#10B981" stroke-width="2"/>
+    <polyline points="-9,0 -3,8 11,-8" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- "ARCANIS" text below shield -->
+  <text x="400" y="740" text-anchor="middle"
+        font-family="system-ui,-apple-system,sans-serif" font-size="32"
+        font-weight="800" letter-spacing="12" fill="url(#g1)">
+    ARCANIS
+  </text>
+
+  <!-- Hex subtitle -->
+  <text x="400" y="768" text-anchor="middle"
+        font-family="monospace" font-size="10"
+        letter-spacing="3" fill="#475569">
+    0x41 52 43 41 4E 49 53
+  </text>
+</svg>

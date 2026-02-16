@@ -1,0 +1,50 @@
+Arcanis Community Edition License
+══════════════════════════════════
+
+Copyright (c) 2025-2026 Muhammad Muiz Zamri. All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software (the "Community Edition"), to use, copy, and
+modify the software for personal, educational, and authorized security
+testing purposes, subject to the following conditions:
+
+1. PERMITTED USE
+   - Personal security research and bug bounty hunting
+   - Educational and learning purposes
+   - Authorized penetration testing with written permission
+   - Internal security assessments of your own systems
+
+2. RESTRICTIONS
+   - You may NOT sell, sublicense, or commercially redistribute this
+     software or any derivative works
+   - You may NOT remove or alter the author attribution, version
+     information, or upgrade prompts
+   - You may NOT use this software for unauthorized access to any
+     system you do not own or have explicit permission to test
+   - You may NOT rebrand or present this software as your own product
+
+3. ATTRIBUTION
+   - Any public mention, review, or derivative work must credit
+     "Muhammad Muiz Zamri" as the original author
+   - The "Arcanis" name and branding remain the property of the author
+
+4. PRO EDITION
+   - The Pro/Lifetime edition with live API verification, attack chain
+     mapping, and additional features is available at https://arcanis.sh
+   - The Pro edition is governed by a separate commercial license
+
+5. NO WARRANTY
+   - This software is provided "as is" without warranty of any kind,
+     express or implied
+   - The author is not responsible for any damages or legal issues
+     arising from the use of this software
+   - Users are solely responsible for ensuring they have authorization
+     before scanning any target
+
+6. LEGAL USE ONLY
+   - This software is designed for AUTHORIZED security testing only
+   - Unauthorized use against systems you do not own or have permission
+     to test may violate local, state, and federal laws
+   - The author assumes no liability for misuse
+
+For commercial licensing inquiries: support@arcanis.sh

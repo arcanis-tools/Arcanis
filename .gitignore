@@ -1,0 +1,34 @@
+# Arcanis
+*.json
+*.html
+*.pdf
+*.sarif
+keys.csv
+Arcanis.py
+keygen.py
+build_pro.py
+build_free.py
+build_both.py
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.spec
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Arcanis data
+.arcanis/
+arcanis.db
