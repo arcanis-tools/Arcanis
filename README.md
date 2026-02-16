@@ -2,35 +2,31 @@
   <img src="arcanis-logo.svg" width="200" alt="Arcanis">
 </p>
 
-# Arcanis
+<h1 align="center">Arcanis</h1>
 
-**Find secrets. Score them. Prove they're real.**
-The only scanner built for bug bounty submissions — not triage.
+<p align="center">
+  <strong>Find secrets. Score them. Prove they're real.</strong><br>
+  <em>Zero noise. Submit-ready. Built for bug bounty hunters.</em>
+</p>
 
-[![Version](https://img.shields.io/badge/v5.1.2-blue?style=flat-square)](https://github.com/arcanis-tools/Arcanis/releases)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-green?style=flat-square)](#)
+<p align="center">
+  <a href="#"><img src="https://img.shields.io/badge/version-5.1.2-blue?style=flat-square" alt="Version"></a>
+  <a href="#"><img src="https://img.shields.io/badge/python-3.8+-green?style=flat-square" alt="Python"></a>
+  <a href="#"><img src="https://img.shields.io/badge/license-Community-cyan?style=flat-square" alt="License"></a>
+  <a href="#"><img src="https://img.shields.io/badge/modules-13-purple?style=flat-square" alt="Modules"></a>
+  <a href="#"><img src="https://img.shields.io/badge/patterns-90+-orange?style=flat-square" alt="Patterns"></a>
+  <a href="#"><img src="https://img.shields.io/badge/false_positives-<5%25-brightgreen?style=flat-square" alt="FP Rate"></a>
+  <a href="#"><img src="https://img.shields.io/badge/lines-10%2C800+-lightgrey?style=flat-square" alt="Lines"></a>
+  <a href="#"><img src="https://img.shields.io/badge/single_file-yes-blue?style=flat-square" alt="Single File"></a>
+  <a href="#"><img src="https://img.shields.io/badge/WAF-adaptive-red?style=flat-square" alt="WAF"></a>
+  <a href="#"><img src="https://img.shields.io/badge/scoring-6--factor-yellow?style=flat-square" alt="Scoring"></a>
+  <a href="#"><img src="https://img.shields.io/badge/verifiers-50+-blueviolet?style=flat-square" alt="Verifiers"></a>
+  <a href="#"><img src="https://img.shields.io/badge/telemetry-none-success?style=flat-square" alt="Telemetry"></a>
+</p>
 
-```
-10,800+ lines · 13 modules · 90+ patterns · 6-factor scoring · WAF adaptive · Single file
-```
-
-### Features
-
-- 🧠 **Smart Mode** — classifies each subdomain (API, admin, auth, staging) and auto-selects modules. No manual flag picking.
-- 📊 **6-Factor Confidence Scoring** — format, context, ownership, file path, entropy, pattern match → one 0-100 score per finding.
-- 🛡️ **WAF Adaptive Intelligence** — detects Cloudflare/Akamai pressure, enters stealth, escalates to deep stealth, recovers conservatively.
-- 🔍 **13 Scan Modules** — CORS, DOM XSS, JWT, open redirect, cloud perms, dep confusion, SSRF, IDOR, subdomain takeover, and more.
-- 🌐 **Subdomain Recon** — CT logs + DNS resolution + HTTP probe + risk scoring from one command.
-- 📈 **Differential Scanning** — `--diff` shows new findings, resolved issues, and new endpoints vs previous scan.
-- 💾 **SQLite Persistence** — track findings and scan history across runs with `--db`.
-- ⚡ **Single File** — one Python file. No frameworks. No Docker. No cloud. No telemetry.
-
-### Why hunters switch to Arcanis
-
-- **Signal over noise:** 6-factor scoring eliminates false positives. < 5% FP rate vs 30-40% on other tools.
-- **Adaptive scanning:** SmartRouter classifies each target and runs only relevant modules — no wasted time.
-- **WAF-aware:** doesn't crash into firewalls. Adapts, backs off, recovers — completes the scan.
-- **Submit-ready output:** every finding scored, contextualized, and ready for your report.
+<p align="center">
+  <code>10,800+ lines</code> · <code>13 modules</code> · <code>90+ patterns</code> · <code>6-factor scoring</code> · <code>WAF adaptive</code> · <code>Single file</code>
+</p>
 
 ---
 
@@ -54,16 +50,36 @@ python3 Arcanis_Community.py https://target.com --smart
 
 ---
 
+## Features
+
+- **Smart Mode** — classifies each subdomain (API, admin, auth, staging) and auto-selects relevant modules. No manual flag picking.
+- **6-Factor Confidence Scoring** — format, context, ownership, file path, entropy, pattern match — one 0-100 score per finding.
+- **WAF Adaptive Intelligence** — detects Cloudflare/Akamai pressure, enters stealth, escalates to deep stealth, recovers conservatively.
+- **13 Scan Modules** — CORS, DOM XSS, JWT, open redirect, cloud perms, dep confusion, SSRF, IDOR, subdomain takeover, and more.
+- **Subdomain Recon** — CT logs + DNS resolution + HTTP probe + risk scoring from one command.
+- **Differential Scanning** — `--diff` shows new findings, resolved issues, and new endpoints vs previous scan.
+- **SQLite Persistence** — track findings and scan history across runs with `--db`.
+- **Single File** — one Python file. No frameworks. No Docker. No cloud. No telemetry.
+
+### Why hunters switch to Arcanis
+
+- **Signal over noise:** 6-factor scoring eliminates false positives. < 5% FP rate vs 30-40% on other tools.
+- **Adaptive scanning:** SmartRouter classifies each target and runs only relevant modules — no wasted time.
+- **WAF-aware:** doesn't crash into firewalls. Adapts, backs off, recovers — completes the scan.
+- **Submit-ready output:** every finding scored, contextualized, and ready for your report.
+
+---
+
 ## Comparison
 
 |  | Arcanis | TruffleHog | Gitleaks | GitGuardian |
 |---|:---:|:---:|:---:|:---:|
-| **Confidence scoring** | 6-factor (0-100) | ❌ | ❌ | Binary |
-| **Smart routing** | Per-target | ❌ | ❌ | ❌ |
-| **WAF adaptation** | Auto-stealth | ❌ | ❌ | ❌ |
-| **CORS + DOM XSS** | 6+14 techniques | ❌ | ❌ | ❌ |
-| **Exploit suggestions** | Per-finding | ❌ | ❌ | ❌ |
-| **Differential scan** | `--diff` mode | ❌ | ❌ | ❌ |
+| **Confidence scoring** | 6-factor (0-100) | -- | -- | Binary |
+| **Smart routing** | Per-target | -- | -- | -- |
+| **WAF adaptation** | Auto-stealth | -- | -- | -- |
+| **CORS + DOM XSS** | 6+14 techniques | -- | -- | -- |
+| **Exploit suggestions** | Per-finding | -- | -- | -- |
+| **Differential scan** | `--diff` mode | -- | -- | -- |
 | **False positive rate** | **< 5%** | ~40% | ~35% | ~30% |
 
 ---
@@ -72,9 +88,11 @@ python3 Arcanis_Community.py https://target.com --smart
 
 Every scan follows a 6-stage pipeline:
 
+[![Adaptive Scanning Pipeline](smart-pipeline.png)](smart-pipeline.png)
+
 ```
-DISCOVER → RESOLVE → CLASSIFY → SCAN → VERIFY → SCORE
-CT logs    DNS+HTTP  SmartRoute  13 mod   50+ API   0-100
+DISCOVER --> RESOLVE --> CLASSIFY --> SCAN --> VERIFY --> SCORE
+CT logs      DNS+HTTP   SmartRoute   13 mod   50+ API   0-100
 ```
 
 | Stage | What Happens |
@@ -84,7 +102,9 @@ CT logs    DNS+HTTP  SmartRoute  13 mod   50+ API   0-100
 | **Classify** | SmartRouter types each asset and selects modules |
 | **Scan** | 90+ patterns + 13 modules, only where relevant |
 | **Verify** | 50+ API verifiers call the real endpoint *(Pro)* |
-| **Score** | 6-factor confidence → single 0-100 number |
+| **Score** | 6-factor confidence — single 0-100 number |
+
+[![Confidence Scoring Pipeline](scoring-pipeline.png)](scoring-pipeline.png)
 
 ---
 
@@ -114,15 +134,15 @@ Arcanis doesn't crash into WAFs — it adapts.
 
 ```
 Normal (5 workers, full speed)
-  ↓ 403 blocks detected
+  | 403 blocks detected
 Stealth (2 workers, 0.5 req/s, UA rotation)
-  ↓ 12+ blocks persist
+  | 12+ blocks persist
 Deep Stealth (1 worker, max backoff)
-  ↓ 90s cooldown
+  | 90s cooldown
 Conservative Recovery (33% workers if 50+ total blocks)
 ```
 
-- 90-second cooldown prevents stealth↔resume oscillation
+- 90-second cooldown prevents stealth/resume oscillation
 - Domain-level blocking skips domains with 5+ blocked URLs
 - WAF Intelligence summary with block rate and recommendations
 
@@ -189,22 +209,22 @@ Start free. Upgrade when you're ready.
 
 | Feature | Community | Pro |
 |---------|:---------:|:---:|
-| 13 scan modules | ✅ | ✅ |
-| 6-factor scoring | ✅ | ✅ |
-| Smart mode + recon | ✅ | ✅ |
-| WAF intelligence | ✅ | ✅ |
-| JSON + HTML output | ✅ | ✅ |
-| SQLite + diff | ✅ | ✅ |
+| 13 scan modules | Yes | Yes |
+| 6-factor scoring | Yes | Yes |
+| Smart mode + recon | Yes | Yes |
+| WAF intelligence | Yes | Yes |
+| JSON + HTML output | Yes | Yes |
+| SQLite + diff | Yes | Yes |
 | Targets per scan | 3 | **Unlimited** |
-| **Live verification** | — | **50+ APIs** |
-| **Exploit paths** | — | **Per-finding** |
-| **Attack chains** | — | **Bounty tiers** |
-| CVE + Wayback | — | ✅ |
-| PDF + SARIF | — | ✅ |
-| Batch scanning | — | ✅ |
-| CI/CD | — | ✅ |
+| **Live verification** | -- | **50+ APIs** |
+| **Exploit paths** | -- | **Per-finding** |
+| **Attack chains** | -- | **Bounty tiers** |
+| CVE + Wayback | -- | Yes |
+| PDF + SARIF | -- | Yes |
+| Batch scanning | -- | Yes |
+| CI/CD | -- | Yes |
 
-→ **[Get Arcanis Pro](mailto:arcanis.tools@gmail.com)**
+**[Get Arcanis Pro](mailto:arcanis.tools@gmail.com)**
 
 ---
 
@@ -222,7 +242,7 @@ Community Edition — free for personal, educational, and authorized security te
 
 **For authorized security testing only.** Ensure you have written permission before scanning any target.
 
-[Changelog](CHANGELOG.md) · [Security Policy](SECURITY.md)
+[Changelog](CHANGELOG.md) | [Security Policy](SECURITY.md)
 
 ---
 
@@ -231,5 +251,5 @@ Community Edition — free for personal, educational, and authorized security te
 </p>
 
 <p align="center">
-  If Arcanis helps you find something real, consider giving it a ⭐
+  If Arcanis helps you find something real, consider giving it a star.
 </p>
