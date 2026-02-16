@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>Find secrets. Score them. Prove they're real.</strong><br>
-  <em>Zero noise. Submit-ready. Built for bug bounty hunters.</em>
+  <em>Zero noise. Submit-ready. Built for offensive security.</em>
 </p>
 
 <p align="center">
