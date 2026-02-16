@@ -16,14 +16,14 @@ The only scanner built for bug bounty submissions — not triage.
 
 ### Features
 
-- 🧠 **Smart Mode** — classifies each subdomain (API, admin, auth, staging) and auto-selects modules. No manual flag picking.
-- 📊 **6-Factor Confidence Scoring** — format, context, ownership, file path, entropy, pattern match → one 0-100 score per finding.
-- 🛡️ **WAF Adaptive Intelligence** — detects Cloudflare/Akamai pressure, enters stealth, escalates to deep stealth, recovers conservatively.
-- 🔍 **13 Scan Modules** — CORS, DOM XSS, JWT, open redirect, cloud perms, dep confusion, SSRF, IDOR, subdomain takeover, and more.
-- 🌐 **Subdomain Recon** — CT logs + DNS resolution + HTTP probe + risk scoring from one command.
-- 📈 **Differential Scanning** — `--diff` shows new findings, resolved issues, and new endpoints vs previous scan.
-- 💾 **SQLite Persistence** — track findings and scan history across runs with `--db`.
-- ⚡ **Single File** — one Python file. No frameworks. No Docker. No cloud. No telemetry.
+- **Smart Mode** — classifies each subdomain (API, admin, auth, staging) and auto-selects modules. No manual flag picking.
+- **6-Factor Confidence Scoring** — format, context, ownership, file path, entropy, pattern match → one 0-100 score per finding.
+- **WAF Adaptive Intelligence** — detects Cloudflare/Akamai pressure, enters stealth, escalates to deep stealth, recovers conservatively.
+- **13 Scan Modules** — CORS, DOM XSS, JWT, open redirect, cloud perms, dep confusion, SSRF, IDOR, subdomain takeover, and more.
+- **Subdomain Recon** — CT logs + DNS resolution + HTTP probe + risk scoring from one command.
+- **Differential Scanning** — `--diff` shows new findings, resolved issues, and new endpoints vs previous scan.
+- **SQLite Persistence** — track findings and scan history across runs with `--db`.
+- **Single File** — one Python file. No frameworks. No Docker. No cloud. No telemetry.
 
 ### Why hunters switch to Arcanis
 
