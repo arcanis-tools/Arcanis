@@ -289,7 +289,7 @@ Community Edition — free for personal, educational, and authorized security te
 ---
 
 <p align="center">
-  <strong>Built by Muhammad Muiz Zamri</strong><br>
+  
   <em>10,800+ lines. Single file. No frameworks. No cloud. No telemetry.</em>
 </p>
 
