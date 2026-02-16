@@ -52,21 +52,25 @@ python3 Arcanis_Community.py https://target.com --smart
 
 ## Features
 
-- **Smart Mode** — classifies each subdomain (API, admin, auth, staging) and auto-selects relevant modules. No manual flag picking.
-- **6-Factor Confidence Scoring** — format, context, ownership, file path, entropy, pattern match — one 0-100 score per finding.
-- **WAF Adaptive Intelligence** — detects Cloudflare/Akamai pressure, enters stealth, escalates to deep stealth, recovers conservatively.
-- **13 Scan Modules** — CORS, DOM XSS, JWT, open redirect, cloud perms, dep confusion, SSRF, IDOR, subdomain takeover, and more.
-- **Subdomain Recon** — CT logs + DNS resolution + HTTP probe + risk scoring from one command.
-- **Differential Scanning** — `--diff` shows new findings, resolved issues, and new endpoints vs previous scan.
-- **SQLite Persistence** — track findings and scan history across runs with `--db`.
-- **Single File** — one Python file. No frameworks. No Docker. No cloud. No telemetry.
+| Feature | Description |
+|---------|-------------|
+| **Smart Mode** | Classifies each subdomain (API, admin, auth, staging) and auto-selects relevant modules |
+| **6-Factor Scoring** | Format, context, ownership, file path, entropy, pattern match — one 0-100 score |
+| **WAF Intelligence** | Detects Cloudflare/Akamai pressure, enters stealth, escalates, recovers conservatively |
+| **13 Scan Modules** | CORS, DOM XSS, JWT, open redirect, cloud perms, dep confusion, SSRF, IDOR, and more |
+| **Subdomain Recon** | CT logs + DNS resolution + HTTP probe + risk scoring from one command |
+| **Differential Scan** | `--diff` shows new findings, resolved issues, new endpoints vs previous scan |
+| **SQLite Persistence** | Track findings and scan history across runs with `--db` |
+| **Single File** | One Python file. No frameworks. No Docker. No cloud. No telemetry |
 
 ### Why hunters switch to Arcanis
 
-- **Signal over noise:** 6-factor scoring eliminates false positives. < 5% FP rate vs 30-40% on other tools.
-- **Adaptive scanning:** SmartRouter classifies each target and runs only relevant modules — no wasted time.
-- **WAF-aware:** doesn't crash into firewalls. Adapts, backs off, recovers — completes the scan.
-- **Submit-ready output:** every finding scored, contextualized, and ready for your report.
+| | |
+|---|---|
+| **Signal over noise** | 6-factor scoring eliminates false positives. < 5% FP rate vs 30-40% on other tools |
+| **Adaptive scanning** | SmartRouter classifies each target and runs only relevant modules — no wasted time |
+| **WAF-aware** | Doesn't crash into firewalls. Adapts, backs off, recovers — completes the scan |
+| **Submit-ready output** | Every finding scored, contextualized, and ready for your report |
 
 ---
 
