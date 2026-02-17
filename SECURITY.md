@@ -13,7 +13,7 @@ Arcanis is designed for **authorized security testing only**. Before scanning an
 
 If you find a security issue in Arcanis itself:
 
-- Email: **support@arcanis.sh**
+- Email: **arcanis.tools@gmail.com**
 - Include: version, steps to reproduce, impact assessment
 - Do **not** open a public GitHub issue for security vulnerabilities
 
